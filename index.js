@@ -13,7 +13,7 @@ const bot = new TelegramBot(token, {
    }
 });
 
-bot.setWebHook(`${process.env.URL}/bot${token}`)
+bot.setWebHook(`${process.env.VERCEL_URL}/bot${token}`)
 
 // const options = {
 //    webHook: {
