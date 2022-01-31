@@ -6,6 +6,7 @@ const Word = require('./models/word');
 require('dotenv').config();
 
 const token = process.env.BOT_TOKEN
+console.log("Порт:" + process.env.PORT)
 
 const bot = new TelegramBot(token, {
    webHook: {
