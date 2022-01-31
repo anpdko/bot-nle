@@ -7,11 +7,7 @@ require('dotenv').config();
 
 const token = process.env.BOT_TOKEN
 
-const bot = new TelegramBot(token, {
-   webHook: {
-      port: process.env.PORT || 443,
-   }
-});
+const bot = new TelegramBot(token);
 
 bot.setWebHook(`${process.env.VERCEL_URL}/bot${token}`)
 
