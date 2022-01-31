@@ -5,31 +5,7 @@ const Theme = require('./models/theme');
 const Word = require('./models/word');
 require('dotenv').config();
 
-const token = process.env.BOT_TOKEN
-console.log("Порт:" + process.env.PORT)
-
-const bot = new TelegramBot(token, {
-   webHook: {
-      port: process.env.PORT || 443,
-   }
-});
-
-bot.setWebHook(`${process.env.MY_URL}/bot${token}`)
-
-// const options = {
-//    webHook: {
-//        port: process.env.PORT
-//    }
-// };
-// const bot = new TelegramBot(process.env.BOT_TOKEN, options);
-
-
-// var port = 8443,
-//     host = '0.0.0.0',
-//     externalUrl = process.env.HEROKU_URL,
-//     token = process.env.BOT_TOKEN,
-//     bot = new TelegramBot(process.env.BOT_TOKEN, { webHook: { port : port, host : host } });
-// bot.setWebHook(externalUrl + ':'+port+'/bot' + token);
+const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true }, 200);
 
 const db = process.env.BD
 mongoose.connect(db, {
