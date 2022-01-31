@@ -8,9 +8,9 @@
     "start": "node index.js"
   },
   "engines": {
-    "node":"16.13.0"
+    "node":"14.x"
   },
-  "author": "16.13.0",
+  "author": "andrey",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^14.3.2",
